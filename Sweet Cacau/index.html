@@ -1,7 +1,122 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+  <title>Sweet - Pedidos de Bolos Decorados</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <script type="text/javascript" src="sweet.js"></script>
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <header>
+    <div><img id="logo" src="./imagens/logo.png" /></div>
+  </header>
+
+  <main>
+    <h2>Faça o seu pedido</h2>
+    <form>
+      <label for="quantidade">Peso (em kg):</label>
+      <input type="number" name="quantidade" id="quantidade" required value="0" onchange="calcularValor()" />
+      
+
+
+      <label for="massa">Massa:</label>
+      <input class="arrow" type="text" name="massa" id="massa" placeholder="Selecione" onFocus="drop(0)" onBlur="drop(1)" required />
+
+      <div class="dropdown">
+        <div class="listdropdown">
+          <div class="massa" id="massa-1" onMouseDown="opcao(1)">
+Chocolate
+          </div>
+          <hr>
+          <div class="massa" id="massa-2" onMouseDown="opcao(2)">
+Baunilha
+          </div>
+          <hr>
+          <div class="massa" id="massa-3" onMouseDown="opcao(3)">
+Mista
+          </div>
+        </div>
+      </div>
+
+      <label for="recheio">Recheio:</label>
+      <input class="arrow" type="text" name="recheio" id="recheio" placeholder="Selecione" onFocus="dropdown(0)" onBlur="dropdown(1)"
+        required />
+
+      <div class="dropdown">
+        <div class="listdropdown">
+          <div class="item" id="item-1" onMouseDown="category(1)">
+Chocolate
+          </div>
+          <hr>
+          <div class="item" id="item-2" onMouseDown="category(2)">
+Doce de Leite
+          </div>
+          <hr>
+          <div class="item" id="item-3" onMouseDown="category(3)">
+Dois Amores
+          </div>
+          <hr>
+          <div class="item" id="item-4" onMouseDown="category(4)">
+Crocante
+          </div>
+          <hr>
+          <div class="item" id="item-5" onMouseDown="category(5)">
+Ninho c/ Nutella
+          </div>
+          <hr>
+          <div class="item" id="item-6" onMouseDown="category(6)">
+Ninho</div>
+          <hr>
+          <div class="item" id="item-7" onMouseDown="category(7)">
+Beijinho
+          </div>
+          <hr>
+          <div class="item" id="item-8" onMouseDown="category(8)">
+Maracujá
+          </div>
+          <hr>
+          <div class="item" id="item-9" onMouseDown="category(9)">
+Brigadeiro Branco
+          </div>
+          <hr>
+          <div class="item" id="item-10" onMouseDown="category(10)">
+Delícia de Abacaxi
+          </div>
+        </div>
+      </div>
+
+      <label for="nome">Nome completo:</label>
+      <input type="text" name="nome" id="nome" required />
+
+      <label for="telefone">Telefone:</label>
+      <input type="tel" name="telefone" id="telefone" required value="83" />
+
+      <label for="data">Data e horário de entrega:</label>
+      <input type="date" name="data" id="data" required />
+      <input type="time" name="time" id="time" required />
+
+      <label for="endereco">Endereço de entrega:</label>
+      <textarea name="endereco" id="endereco" required></textarea>
+
+      <div class="checkbox">
+      <input type="checkbox" id="checkbox-topo" class="ui-checkbox">
+      <p id="checkbox-text">Adicionar topo do bolo.</p>
+      </div>
+
+      <div class="valor">
+      <span id="valor_total"></span>
+      </div>
+
+      <div><input type="submit" value="Enviar pedido" id="btn-enviar-pedido" /></div>
+    </form>
+  </main>
+
+  <footer>
+    <p>Sweet Cacau ® - Todos os direitos reservados</p>
+  </footer>
 </body>
+
 </html>
