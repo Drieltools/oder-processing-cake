@@ -1,0 +1,286 @@
+/* estilo geral */
+  
+  body {
+    font-family: 'Times New Roman', Times, serif;
+    max-width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+  }
+  
+  /* estilo do cabeçalho */
+  header {
+    background: linear-gradient(65deg, #fef8fa, #ec889f);
+    display: flex;
+    justify-content: center;
+    padding: 15px  0px;
+    position: fixed;
+    width: 100vw;
+  }
+  
+  /* estilo do formulário */
+  main {
+    max-width: 100%;
+    margin: auto;
+    padding: 40px;
+    color: #551607;
+  }
+  
+  h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+    margin-top: 75px;
+  }
+  
+  form {
+    display: grid;
+    grid-gap: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .valor{
+    text-align: left;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+
+  .item{
+    margin-top: 9px;
+    font-size: 18px;
+  }
+
+  hr{
+    margin-top: 10px;
+  }
+  
+  ::placeholder{
+    color: black;
+  }
+
+  .dropdown {
+    width: auto;
+    background-color: #cccccc34;
+    border-radius: 5px;
+    margin-top: -10px;
+    border: .5px solid #ccc;
+    height: 120px;
+    overflow: auto;
+    display: none;
+    
+
+    transform: translate(0px, -25px);
+  }
+
+  #massa-1{
+    margin-top: 8px;
+  }
+
+  ::-webkit-scrollbar{
+    background-color: #ec889f7c;
+    width: 5px;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+  }
+
+  ::-webkit-scrollbar-thumb{
+    background-color: #ff829f;
+    border-radius: 5px;
+  }
+
+  input,
+  select,
+  textarea {
+    width: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    font-size: 20px;
+    outline:none;
+    text-align: left;
+    margin-top: -20px;
+    margin-bottom: 10px;
+  
+  }
+
+  #item-10{
+    margin-bottom: 5px;
+  }
+
+  input[class="arrow"]{
+    background-image: url(./imagens/arrow.png);
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) center;
+}
+
+  input[type="submit"] {
+    background-color: #f9c1bb;
+    border: none;
+    color: #551607;
+    padding: 15px 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  input[type="submit"]{
+    background-color: #f9c1bb;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  textarea{
+    margin-bottom: 10px;
+  }
+
+  .valor{
+    font-size: 18px;
+    align-items: center;
+    display: flex;
+  }
+
+  /* checkbox settings 👇 */
+
+.ui-checkbox {
+  --primary-color: #ff829f;
+  --secondary-color: #fff;
+  --primary-hover-color: #ff829f;
+  /* checkbox */
+  --checkbox-diameter: 20px;
+  --checkbox-border-radius: 5px;
+  --checkbox-border-color: #ff829f;
+  --checkbox-border-width: 1px;
+  --checkbox-border-style: solid;
+  /* checkmark */
+  --checkmark-size: 1.2;
+}
+
+.ui-checkbox, 
+.ui-checkbox *, 
+.ui-checkbox *::before, 
+.ui-checkbox *::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.checkbox{
+  position:static;
+  margin-top: 10px;
+}
+
+#checkbox-text{
+  margin-top: -35px;
+  font-size: 18px;
+  font-weight: bold;
+  float: left;
+  margin-left: 35px;
+}
+
+.ui-checkbox {
+  margin-right: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: var(--checkbox-diameter);
+  height: var(--checkbox-diameter);
+  border-radius: var(--checkbox-border-radius);
+  background: var(--secondary-color);
+  border: var(--checkbox-border-width) var(--checkbox-border-style) var(--checkbox-border-color);
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+
+.ui-checkbox::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-box-shadow: 0 0 0 calc(var(--checkbox-diameter) / 2.5) var(--primary-color);
+  box-shadow: 0 0 0 calc(var(--checkbox-diameter) / 2.5) var(--primary-color);
+  border-radius: inherit;
+  opacity: 0;
+  -webkit-transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+  -o-transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+  transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+}
+
+.ui-checkbox::before {
+  top: 40%;
+  left: 50%;
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 7px;
+  border-right: 2px solid var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+  -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(0);
+  -ms-transform: translate(-50%, -50%) rotate(45deg) scale(0);
+  transform: translate(-50%, -50%) rotate(45deg) scale(0);
+  opacity: 0;
+  -webkit-transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6),opacity 0.1s;
+  -o-transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6),opacity 0.1s;
+  transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6),opacity 0.1s;
+}
+
+.ui-checkbox:hover {
+  border-color: var(--primary-color);
+}
+
+.ui-checkbox:checked {
+  background: var(--primary-color);
+  border-color: transparent;
+}
+
+.ui-checkbox:checked::before {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(var(--checkmark-size));
+  -ms-transform: translate(-50%, -50%) rotate(45deg) scale(var(--checkmark-size));
+  transform: translate(-50%, -50%) rotate(45deg) scale(var(--checkmark-size));
+  -webkit-transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  -o-transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+}
+
+.ui-checkbox:active:not(:checked)::after {
+  -webkit-transition: none;
+  -o-transition: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  transition: none;
+  opacity: 1;
+}
+  
+  /* estilo do rodapé */
+  footer {
+    background-color: #f9c1bb;
+    padding: 20px;
+    text-align: center;
+    color: #551607;
+  }
+
+  #logo {
+    width: 30vw;
+  }
+
+  div{
+    text-align: center;
+    justify-content: center;
+    font-size: 18px;
+  }
