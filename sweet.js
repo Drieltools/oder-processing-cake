@@ -32,7 +32,7 @@ function drop(p) {
 
 function calcularValor() {
    var kg = parseFloat(document.getElementById("quantidade").value);
-   var valorPorKg = 70;
+   var valorPorKg = 75;
    var valorTotal = kg * valorPorKg;
 
    var valorTotalElement = document.getElementById("valor_total");
